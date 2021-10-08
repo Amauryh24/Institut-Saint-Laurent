@@ -4,7 +4,7 @@ On va permettre à notre utilisateur virtuel d'introduire des valeurs numérique
 Pour chacunes des valeurs introduite, on va indiquer si oui ou non, cette valeur se trouve dans un intervalle donnée.
 Les bornes de cet intervalle ayant été introduite par notre utilisateur.
 
-### variables
+### Variables
 
 ```
 borneMIN : borne minimale entrée par l'utilisateur
@@ -12,7 +12,7 @@ borneMAX : borne maximale entrée par l'utilisateur
 currentValue : Valeur courante entrée par l'utilisateur
 ```
 
-### initialisation
+### Initialisation
 
 ```
 écrire("entrez la valeur de la borne minimale");
@@ -21,7 +21,7 @@ lire(borneMIN)
 lire(borneMAX)
 ```
 
-### algorithme
+### Algorithme
 
 ```
 tant que (borneMIN >= borneMAX)

@@ -2,7 +2,7 @@
 
 écrire le speudo code pour vérifier si une date est valide ou non et si elle est bissextile
 
-### variables
+### Variables
 
 ```
 jour: jour de la date
@@ -12,7 +12,7 @@ ISBessextile: Indique si oui ou non une date est bissextile
 ISCorrecte: Indique si oui ou non une date est correcte
 ```
 
-### initialisation
+### Initialisation
 
 ```
 écrire("Veuillez introduire l'année de la date?")
@@ -23,7 +23,7 @@ lire(mois)
 lire(jour)
 ```
 
-### algorithme
+### Algorithme
 
 ```
 if (annee mod 4 == 0 and annee mod 100 not = 0) or (annee mod 400 == 0)
