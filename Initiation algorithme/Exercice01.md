@@ -4,20 +4,24 @@
 
 ### variables
 
-- jour: jour de la date
-- mois: Mois de la date
-- annee: Année de la date
-- ISBessextile: Indique si oui ou non une date est bissextile
-- ISCorrecte: Indique si oui ou non une date est correcte
+```
+jour: jour de la date
+mois: Mois de la date
+annee: Année de la date
+ISBessextile: Indique si oui ou non une date est bissextile
+ISCorrecte: Indique si oui ou non une date est correcte
+```
 
 ### initialisation
 
+```
 écrire("Veuillez introduire l'année de la date?")
 lire(annee)
 écrire("Veuillez introduire le mois de la date?")
 lire(mois)
 écrire("Veuillez introduire le jour de la date?")
 lire(jour)
+```
 
 ### algorithme
 

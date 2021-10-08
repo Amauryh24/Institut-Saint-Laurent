@@ -6,16 +6,20 @@ Les bornes de cet intervalle ayant été introduite par notre utilisateur.
 
 ### variables
 
-- borneMIN : borne minimale entrée par l'utilisateur
-- borneMAX : borne maximale entrée par l'utilisateur
-- currentValue : Valeur courante entrée par l'utilisateur
+```
+borneMIN : borne minimale entrée par l'utilisateur
+borneMAX : borne maximale entrée par l'utilisateur
+currentValue : Valeur courante entrée par l'utilisateur
+```
 
 ### initialisation
 
+```
 écrire("entrez la valeur de la borne minimale");
 lire(borneMIN)
 écrire("entrez la valeur de la borne maximale");
 lire(borneMAX)
+```
 
 ### algorithme
 
