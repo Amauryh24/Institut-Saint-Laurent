@@ -17,12 +17,12 @@ valeurs introduites doit être égales à la taille du tableau.
 ### Variables
 
 ```
-tabValue[7]: Taille de mon tableau et rempli par l'utilisateur
-tabIntroduit[] : Tableau de une ou plusieurs valeurs à tester
-testerNbr: nombre de valeur à tester introduite par l'utilisateur
+tabValeurs[7]: Taille de mon tableau rempli par l'utilisateur
+nOfValeurs: nombre de valeur à tester introduite par l'utilisateur
+tabComparaison[] : Tableau de une ou plusieurs valeurs à tester
+nOfComparaison: nombre de valeur introduite par l'utilisateur pour faire la comparaison
 valeur: Valeur introduite par l'utilisateur
 currentValue: valeur courante entrée par l'utilisateur pour le tableau
-valeurNbr: nombre de valeur introduite par l'utilisateur
 ```
 
 ### Initialisation
@@ -36,7 +36,7 @@ lire (response)
 
 ```
 i = 0
-valeurNbr = 0
+nOfComparaison = 0
 while (response == "oui" and i < 7)
 
     écrire("entrer une valeur numérique:", currentValue)
@@ -45,28 +45,28 @@ while (response == "oui" and i < 7)
     écrire("voulez vous entrez une autre valeur?", oui/non)
     lire(response)
     i = i + 1
-    valeurNbr = valeurNbr + 1
+    nOfComparaison = nOfComparaison + 1
 end while
 
 response = oui
 j = 0
-testerNbr = 0
+nOfValeurs = 0
 while (response == oui)
     écrire("Veuillez introduire une valeur ou plus et vérifier si elle/elles existe(nt) dans le tableau")
     lire (valeur)
-    tabIntroduit[j] = valeur
-    testerNbr = testerNbr + 1
+    tabComparaison[j] = valeur
+    nOfValeurs = nOfValeurs + 1
     j = j + 1
     écrire("voulez-vous introduire une autre valeur? oui/non)
-    lire response
+    lire (response)
 end while
 
 j = 0
 k = 0
-while (j < valeurNbr)
-    while (k < testerNbr)
-        if (tabValue[j] == tabIntroduit[k])
-            then écrire("la valeur: ", tabIntroduit[k], "introduite est présente dans le tableau à la position:", j + 1)
+while (j < nOfComparaison)
+    while (k < nOfValeurs)
+        if (tabValeurs[j] == tabComparaison[k])
+            then écrire("la valeur: ", tabComparaison[k], "introduite est présente dans le tableau à la position:", j + 1)
         end if
         k = k + 1
     end While
