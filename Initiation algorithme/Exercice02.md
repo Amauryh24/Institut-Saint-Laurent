@@ -1,8 +1,8 @@
 # Exercice 02: Intervalle Min et Max
 
-On va permettre à notre utilisateur virtuel d'introduire des valeurs numériques à l'écran.
-Pour chacunes des valeurs introduite, on va indiquer si oui ou non, cette valeur se trouve dans un intervalle donnée.
-Les bornes de cet intervalle ayant été introduite par notre utilisateur.
+le calcule de la factoriel.
+L'utilisateur va pouvoir introduire un ensemble de valeurs(0,1,...,n) et pour chaque valeur introduite,
+il faut lui afficher la valeur de la factorielle.
 
 ### Variables
 
