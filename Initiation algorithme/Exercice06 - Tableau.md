@@ -1,10 +1,18 @@
 # Exercice 04: Recheche valeur.
 
-On va reprendre l'exercice permettant d'identifier la valeur maximale et la valeur maximale et la valeur minimal d'une suite de valeurs introduite. Mais dans cette version de l'exercice, on va devoir à la fin, en plus afficher toutes les valeurs qui ont été introduites
+Étant donné un tableau de taille déterminée (la taille du tableau doit être choisie par vous) de
+type entier, il s’agit de demander à l’utilisateur d’introduire une valeur et de rechercher si cette
+valeur appartient ou non au tableau.
+Avant cela, il aura fallut initialiser le tableau avec des valeurs lues à l’écran. Le nombre de
+valeurs introduites doit être égales à la taille du tableau.
 
-Attention: l'utilisateur peut introduire un nombre quelconque de valeur tant qu'il ne dépasse pas la capacité maximale de votre tableau. Donc, avec un tableau de taille 15, l'utilisateur pourra introduire entre 0 et 15 valeurs!
+- Il faut le faire avec une seule valeur
+- Il faut le faire avec une suit de valeurs que l’utilisateur peut introduire
+- Procéder aux tests du pseudo-code
 
-Dans l'affichage, il ne faudra bien sûr qu'afficher les éléments qui auront reçu une valeur!!
+  En option :
+  On peut faire une autre version de l’exercice qui consiste à stocker dans un tableau, toutes les
+  valeurs à rechercher.
 
 ### Variables
 
