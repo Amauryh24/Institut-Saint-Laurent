@@ -17,10 +17,10 @@ valeurs introduites doit être égales à la taille du tableau.
 ### Variables
 
 ```
-tabValeurs[7]: Taille de mon tableau rempli par l'utilisateur
-nOfValeurs: nombre de valeur à tester introduite par l'utilisateur
-tabComparaison[] : Tableau de une ou plusieurs valeurs à tester
-nOfComparaison: nombre de valeur introduite par l'utilisateur pour faire la comparaison
+tabValues[7]: Taille de mon tableau rempli par l'utilisateur
+nOfValues: nombre de valeur à tester introduite par l'utilisateur
+tabCompare[] : Tableau de une ou plusieurs valeurs à tester
+nOfCompare: nombre de valeur introduite par l'utilisateur pour faire la comparaison
 currentValue: valeur courante entrée par l'utilisateur pour le tableau
 response: Réponse entrée par l'utilisateur
 ```
@@ -36,7 +36,7 @@ lire (response)
 
 ```
 i = 0
-nOfComparaison = 0
+nOfCompare = 0
 while (response == "oui" and i < 7)
 
     écrire("entrer une valeur numérique:", currentValue)
@@ -45,17 +45,17 @@ while (response == "oui" and i < 7)
     écrire("voulez vous entrez une autre valeur?", oui/non)
     lire(response)
     i = i + 1
-    nOfComparaison = nOfComparaison + 1
+    nOfCompare = nOfCompare + 1
 end while
 
 response = oui
 j = 0
-nOfValeurs = 0
+nOfValues = 0
 while (response == oui)
     écrire("Veuillez introduire une valeur ou plus et vérifier si elle/elles existe(nt) dans le tableau")
     lire (currentValue)
-    tabComparaison[j] = currentValue
-    nOfValeurs = nOfValeurs + 1
+    tabCompare[j] = currentValue
+    nOfValues = nOfValues + 1
     j = j + 1
     écrire("voulez-vous introduire une autre valeur? oui/non)
     lire (response)
@@ -63,10 +63,10 @@ end while
 
 j = 0
 k = 0
-while (j < nOfComparaison)
-    while (k < nOfValeurs)
-        if (tabValeurs[j] == tabComparaison[k])
-            then écrire("la valeur: ", tabComparaison[k], "introduite est présente dans le tableau à la position:", j + 1)
+while (j < nOfCompare)
+    while (k < nOfValues)
+        if (tabValues[j] == tabCompare[k])
+            then écrire("la valeur: ", tabCompare[k], "introduite est présente dans le tableau à la position:", j + 1)
         end if
         k = k + 1
     end While
