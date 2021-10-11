@@ -21,8 +21,8 @@ tabValeurs[7]: Taille de mon tableau rempli par l'utilisateur
 nOfValeurs: nombre de valeur à tester introduite par l'utilisateur
 tabComparaison[] : Tableau de une ou plusieurs valeurs à tester
 nOfComparaison: nombre de valeur introduite par l'utilisateur pour faire la comparaison
-valeur: Valeur introduite par l'utilisateur
 currentValue: valeur courante entrée par l'utilisateur pour le tableau
+response: Réponse entrée par l'utilisateur
 ```
 
 ### Initialisation
@@ -53,8 +53,8 @@ j = 0
 nOfValeurs = 0
 while (response == oui)
     écrire("Veuillez introduire une valeur ou plus et vérifier si elle/elles existe(nt) dans le tableau")
-    lire (valeur)
-    tabComparaison[j] = valeur
+    lire (currentValue)
+    tabComparaison[j] = currentValue
     nOfValeurs = nOfValeurs + 1
     j = j + 1
     écrire("voulez-vous introduire une autre valeur? oui/non)
@@ -77,7 +77,5 @@ end while
 
 ## phase de test
 
-| Desscription | Données        | Résultat attendu                                                      | Résultat obtenu                                                       | Status du test |
-| ------------ | -------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | -------------- |
-| Cas général  | 45,6,78,-1,170 | - Valeur maximal= 170 en position 5, valeur minimal= -1 en position 4 | - Valeur maximal= 170 en position 5, valeur minimal= -1 en position 4 | Ok             |
-| test limite  | -1,-45,30,-15  | - Valeur maximal= 30 en position 3, valeur minimal= -45 en position 2 | - Valeur maximal= 30 en position 3, valeur minimal= -45 en position 2 | Ok             |
+| Desscription | Données | Résultat attendu | Résultat obtenu | Status du test |
+| ------------ | ------- | ---------------- | --------------- | -------------- |
