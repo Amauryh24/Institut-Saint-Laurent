@@ -1,10 +1,10 @@
-# Exercice 04: Valeur maximale et Minimale avec tableau.
+# Exercice 04: Valeur maximale et minimale avec tableau.
 
 On va reprendre l'exercice permettant d'identifier la valeur maximale et la valeur maximale et la valeur minimal d'une suite de valeurs introduite. Mais dans cette version de l'exercice, on va devoir à la fin, en plus afficher toutes les valeurs qui ont été introduites
 
-Attention: l'utilisateur peut introduire un nombre quelconque de valeur tnat qu'il ne dépasse pas la capacité maximale de votre tableau. Donc, avec un tableau de taille 15, l'utilisateur pourra introduire entre 0 et 15 valeurs!
+Attention: l'utilisateur peut introduire un nombre quelconque de valeur tant qu'il ne dépasse pas la capacité maximale de votre tableau. Donc, avec un tableau de taille 15, l'utilisateur pourra introduire entre 0 et 15 valeurs!
 
-Dans l'affichage, il ne faudra bien sûr qu'afficher les élément qui auront reçu une valeur!!
+Dans l'affichage, il ne faudra bien sûr qu'afficher les éléments qui auront reçu une valeur!!
 
 ### Variables
 
@@ -67,7 +67,7 @@ end while
 
 ## phase de test
 
-| Desscription | Données        | Résultat attendu                                                    | Résultat obtenu                                                     | Status du test |
-| ------------ | -------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | -------------- |
-| Cas général  | 45,6,78,-1,170 | Valeur maximal= 170 en position 5, valeur minimal= -1 en position 4 | valeur maximal= 170 en position 5, valeur minimal= -1 en position 4 | Ok             |
-| test limite  | -1,-45,30,-15  | Valeur maximal= 30 en position 3, valeur minimal= -45 en position 2 | Valeur maximal= 30 en position 3, valeur minimal= -45 en position 2 | Ok             |
+| Desscription | Données        | Résultat attendu                                                      | Résultat obtenu                                                       | Status du test |
+| ------------ | -------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | -------------- |
+| Cas général  | 45,6,78,-1,170 | - Valeur maximal= 170 en position 5, valeur minimal= -1 en position 4 | - Valeur maximal= 170 en position 5, valeur minimal= -1 en position 4 | Ok             |
+| test limite  | -1,-45,30,-15  | - Valeur maximal= 30 en position 3, valeur minimal= -45 en position 2 | - Valeur maximal= 30 en position 3, valeur minimal= -45 en position 2 | Ok             |
