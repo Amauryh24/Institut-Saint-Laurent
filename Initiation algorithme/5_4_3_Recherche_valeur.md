@@ -36,7 +36,7 @@ lire (response)
 
 ```
 i = 0
-nOfCompare = 0
+nOfValues = 0
 while (response == "oui" and i < 7)
 
     écrire("entrer une valeur numérique:", currentValue)
@@ -45,17 +45,17 @@ while (response == "oui" and i < 7)
     écrire("voulez vous entrez une autre valeur?", oui/non)
     lire(response)
     i = i + 1
-    nOfCompare = nOfCompare + 1
+    nOfValues = nOfValues + 1
 end while
 
 response = oui
 j = 0
-nOfValues = 0
+nOfCompare = 0
 while (response == oui)
-    écrire("Veuillez introduire une valeur ou plus et vérifier si elle/elles existe(nt) dans le tableau")
+    écrire("Veuillez introduire une valeur ou plus et vérifier si elle existe/elles existent dans le tableau")
     lire (currentValue)
     tabCompare[j] = currentValue
-    nOfValues = nOfValues + 1
+    nOfCompare = nOfCompare + 1
     j = j + 1
     écrire("voulez-vous introduire une autre valeur? oui/non)
     lire (response)
@@ -63,8 +63,8 @@ end while
 
 j = 0
 k = 0
-while (j < nOfCompare)
-    while (k < nOfValues)
+while (j < nOfValues)
+    while (k < nOfCompare)
         if (tabValues[j] == tabCompare[k])
             then écrire("la valeur: ", tabCompare[k], "introduite est présente dans le tableau à la position:", j + 1)
         end if
