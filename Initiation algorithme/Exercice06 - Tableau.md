@@ -77,5 +77,7 @@ end while
 
 ## phase de test
 
-| Desscription | Données | Résultat attendu | Résultat obtenu | Status du test |
-| ------------ | ------- | ---------------- | --------------- | -------------- |
+| Desscription      | Données  | Résultat attendu             | Résultat obtenu     | Status du test |
+| ----------------- | -------- | ---------------------------- | ------------------- | -------------- |
+| 45,-5,65,22,2,0,4 | 45       | 45 est dans le tableau       | est dans le tableau | ok             |
+| 45,-5,65,22,2,0,4 | 45,11,22 | 45 et 22 est dans le tableau | est dans le tableau | ok             |
