@@ -1,4 +1,4 @@
-# Exercice 04: Valeur maximale et minimale avec tableau.
+# Exercice 05: Valeur maximale et minimale avec tableau.
 
 On va reprendre l'exercice permettant d'identifier la valeur maximale et la valeur maximale et la valeur minimal d'une suite de valeurs introduite. Mais dans cette version de l'exercice, on va devoir à la fin, en plus afficher toutes les valeurs qui ont été introduites
 
