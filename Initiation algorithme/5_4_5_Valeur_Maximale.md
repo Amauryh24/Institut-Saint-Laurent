@@ -6,6 +6,8 @@ Attention: l'utilisateur peut introduire un nombre quelconque de valeur tant qu'
 
 Dans l'affichage, il ne faudra bien sûr qu'afficher les éléments qui auront reçu une valeur!!
 
+## Algorithme
+
 ### Variables
 
 ```
@@ -14,6 +16,7 @@ positionMIN: stocker la valeur minimale entrée par l'utilisateur
 positionMAX: stocker la valeur maximale entrée par l'utilisateur
 tabValue[15]: Taille de mon tableau
 valeurNbr: nombre de valeur introduite par l'utilisateur
+response: Réponse entrée par l'utilisateur
 ```
 
 ### Initialisation
@@ -22,8 +25,6 @@ valeurNbr: nombre de valeur introduite par l'utilisateur
 écrire("voulez-vous commencer?, oui/non)
 lire (response)
 ```
-
-### Algorithme
 
 ```
 valeurNbr = 0

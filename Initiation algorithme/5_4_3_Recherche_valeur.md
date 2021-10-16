@@ -62,8 +62,8 @@ while (response == oui)
 end while
 
 j = 0
-k = 0
 while (j < nOfValues)
+    k = 0
     while (k < nOfCompare)
         if (tabValues[j] == tabCompare[k])
             then écrire("la valeur: ", tabCompare[k], "introduite est présente dans le tableau à la position:", j + 1)
@@ -77,7 +77,7 @@ end while
 
 ## phase de test
 
-| Desscription      | Données  | Résultat attendu             | Résultat obtenu     | Status du test |
-| ----------------- | -------- | ---------------------------- | ------------------- | -------------- |
-| 45,-5,65,22,2,0,4 | 45       | 45 est dans le tableau       | est dans le tableau | ok             |
-| 45,-5,65,22,2,0,4 | 45,11,22 | 45 et 22 est dans le tableau | est dans le tableau | ok             |
+| Desscription           | Données                      | Résultat attendu             | Résultat obtenu              | Status du test |
+| ---------------------- | ---------------------------- | ---------------------------- | ---------------------------- | -------------- |
+| Pour une valeur        | 45,-5,65,22,2,0,4 & 45       | 45 est dans le tableau       | 45 est dans le tableau       | ok             |
+| Pour plusieurs valeurs | 45,-5,65,22,2,0,4 & 45,11,22 | 45 et 22 est dans le tableau | 45 et 22 est dans le tableau | ok             |

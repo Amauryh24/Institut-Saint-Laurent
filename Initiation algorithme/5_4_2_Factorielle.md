@@ -9,6 +9,8 @@ Exemple:
 0! => 1
 1! => 1
 
+## Algorithme
+
 ### Variables
 
 ```
@@ -24,8 +26,6 @@ iscontinure = false : on vérifie si l'utilisateur veux continuer ou non
 écrire("voulez vous calculer la factorielle d'un nombre? O/N)
 lire(response)
 ```
-
-### Algorithme
 
 ```
 tand que (response == "O")
