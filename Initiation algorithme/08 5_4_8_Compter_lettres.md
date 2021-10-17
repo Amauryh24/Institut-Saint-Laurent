@@ -28,46 +28,9 @@ totalVoyelles: Nombre total de voyelles
 ### Initialisation
 
 ```
-do
-    écrire("Entrez une phrase")
-    lire(phrase)
-    longueurPhrase = strlen(phrase)
-while()
+
 ```
 
 ```
-while(response == 'oui')
-écrire("Veuillez entrer le premier nombre entier")
-lire(nbr1)
-écrire("Veuillez entrer le second nombre entier")
-lire(nbr2)
 
-a = nbr1
-b = nbr2
-reste = 1
-
-while (reste <> 0)
-    if (a < b)
-        then
-            temp = a
-            a = b
-            b = temp
-    endif
-    reste = a - b
-    a = b
-    b = reste
-    if (reste == 1)
-        then
-            PGCD = 1
-            reste = 0
-    endif
-
-    if (reste > 1)
-        then PGCD = b
-    endif
-end while
-
-écrire("le PGCD de", nbr1, "et", nbr2,"est un diviseur de:", PGCD )
-écrire("Voulez-vous rechercher un PGCD de deux nombre entier?" )
-lire(response)
 ```
