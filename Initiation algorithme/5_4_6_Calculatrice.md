@@ -1,9 +1,9 @@
-# Exercice 5.4.6: Calculatrice
+# Exercice 5_4_6: Calculatrice
 
 Écrire un Algorithme qui permet à l’utilisateur d’introduire :
 
 - Deux opérandes
-- Un opérateur parmi ceux-ci : \ \* / + -
+- Un opérateur parmi ceux-ci : \* / + -
 
 Après la saisie de ces données, il faut afficher le résultat.
 Permettre à l’utilisateur de procéder à plusieurs calculs.
@@ -22,6 +22,8 @@ noDivide: Booleen qui vérifie si l'utilisateur à divisé par 0
 isContinue: Booleen si l'utilisateur continue avec le résultat obtenu.
 ```
 
+### Initialisation
+
 ```
 écrire("voulez-vous utiliser la calculatrice? oui/non")
 lire(response)
@@ -35,7 +37,8 @@ while(response == 'oui')
             lire(operant1)
     endif
 
-    écrire("Quelle opération voulez-vous effectuer? -,+,*,/", operator)
+    écrire("Quelle opération voulez-vous effectuer? -,+,*,/")
+    lire(operator)
         while (operator <> '-' and operator <> '+' and operator <> '/' and operator <> '/' )
             écrire("Veuillez mettre un opérateur valide -,+,*,/")
             lire(operator)

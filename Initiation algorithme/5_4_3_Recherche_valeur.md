@@ -1,4 +1,4 @@
-# Exercice 06: Recheche valeur.
+# Exercice 5_4_3: Recheche valeur.
 
 Étant donné un tableau de taille déterminée (la taille du tableau doit être choisie par vous) de
 type entier, il s’agit de demander à l’utilisateur d’introduire une valeur et de rechercher si cette

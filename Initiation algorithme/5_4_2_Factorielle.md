@@ -1,4 +1,4 @@
-# Exercice 03: Factorielle
+# Exercice 5_4_2: Factorielle
 
 le calcule de la factoriel.
 L'utilisateur va pouvoir introduire un ensemble de valeurs(0,1,...,n) et pour chaque valeur introduite,
