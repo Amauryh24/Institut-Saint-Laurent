@@ -23,24 +23,22 @@ lire(response)
 
 // Début
 i = 0
-phraseTaille = 0
 while (response == 'oui' && i < 100 )
     écrire("Entrer une lettre")
     lire(currentLetter)
-    phraseTab[i] = currentLetter
     if (currentLetter == '.' || currentLetter == '?' ||currentLetter == '!')
-        then i = 100
+        then phraseTab[i] = '\0'
+        else phraseTab[i] = currentLetter
     end if
     //vérifier si la phrase se termine à 100 avec une ponctuation
     ...
     //
     i = i + 1
-    phraseTaille = phraseTaille + 1
 
 end while
 
-call readSentence(phraseTab, phraseTaille)
-call countVowel(phraseTab, phraseTaille)
+call readSentence(phraseTab, i)
+call countVowel(phraseTab, i)
 
 // Fin
 ```
@@ -55,12 +53,12 @@ call countVowel(phraseTab, phraseTaille)
 
     readSentence(array, size)
     // Paramètre output
-    // i:index
+    // j:jndex
     // sentence: la phrase à afficher
-    i = 0
-    while (i < size)
-        sentence = sentence + array[i]
-        i = i + 1
+    j = 0
+    while (j < size)
+        sentence = sentence + array[j]
+        j = j + 1
     end while
     écrire("La phrase à l’écran virtuel", sentence );
 //fin sous-algorithme
@@ -76,14 +74,14 @@ call countVowel(phraseTab, phraseTaille)
     // size: Taille de mon tableau
 
     // Paramètre output
-    // i:index
+    // j:index
     // countVowel: le nombre de voyelles
-    i = 0
-    while (i < size)
-        if (array[i] == 'a' || array[i] == 'e' || array[i] == 'i', || array[i] == 'o'|| array[i] == 'u')
+    j = 0
+    while (j < size)
+        if (array[j] == 'a' || array[j] == 'e' || array[i] == 'j', || array[j] == 'o'|| array[j] == 'u')
             then countVowel = countVowel + 1
         end if
-        i = i + 1
+        j = j + 1
     end while
     écrire("Le nombre de voyelle dans la phrase est de: ", countVowel );
 //fin sous-algorithme
