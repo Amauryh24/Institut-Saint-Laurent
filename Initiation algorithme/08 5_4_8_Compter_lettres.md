@@ -81,7 +81,7 @@ call countVowel(phraseTab, i)
     // countVowel: le nombre de voyelles
     j = 0
     while (j < size)
-        if (array[j] == 'a' || array[j] == 'e' || array[i] == 'j', || array[j] == 'o'|| array[j] == 'u')
+        if (array[j] == 'a' || array[j] == 'e' || array[i] == 'j', || array[j] == 'o'|| array[j] == 'u' || array[j] == 'y')
             then countVowel = countVowel + 1
         end if
         j = j + 1
