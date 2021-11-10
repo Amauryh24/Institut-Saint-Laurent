@@ -4,32 +4,29 @@ Ecrire un algorithme qui demande un nombre compris entre 10 et 20, jusqu’à ce
 convienne. En cas de réponse supérieure à 20, on fera apparaitre un message : Plus petit ! et
 inversement. Plus grand ! si le nombre est inférieur à 10.
 
+## Variables
+
+- currentValue: Valeur courante entrée par l'utilisateur
+- value1 : variable qui stocke la valeur 10
+- valur2 : variable qui stocke la valeur 20
+
 ## Algorithme
 
-### Variables
-
 ```
-currentValue: Valeur courante entrée par l'utilisateur
-value1 : variable qui stocke la valeur 10
-valur2 : variable qui stocke la valeur 20
-```
-
-### Initialisation
-
-```
+// Initialisation
 value1 = 10
 value2 = 20
 écrire("Veuillez insérer une valeur comprise entre 10 et 20")
 lire(currentValue)
-```
 
-```
+//Début
 while (currentValue < 10 && currentValue > 20)
     if currentValue < 10
         then écrire("Plus grand!")
         else écrire("Plus petit!")
     endif
 end while
+//fin
 ```
 
 ## phase de test

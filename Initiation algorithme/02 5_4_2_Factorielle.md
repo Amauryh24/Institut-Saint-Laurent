@@ -9,25 +9,20 @@ Exemple:
 0! => 1
 1! => 1
 
+## Variables
+
+- valeur: valeur introduite par l'utilisateur
+- factoriel: résultat de la factorielle
+- iscontinure = false : on vérifie si l'utilisateur veux continuer ou non
+
 ## Algorithme
 
-### Variables
-
 ```
-valeur: valeur introduite par l'utilisateur
-factoriel: résultat de la factorielle
-iscontinure = false : on vérifie si l'utilisateur veux continuer ou non
-
-```
-
-### Initialisation
-
-```
+//Initialisation
 écrire("voulez vous calculer la factorielle d'un nombre? O/N)
 lire(response)
-```
 
-```
+// début
 tand que (response == "O")
     écrire("insérez une valeur numérique")
     lire(valeur)
@@ -41,6 +36,7 @@ tand que (response == "O")
         écrire("entrer une nouvelle valeur? O/N)
         lire(response)
 fin tant que
+// fin
 ```
 
 ## phase de test

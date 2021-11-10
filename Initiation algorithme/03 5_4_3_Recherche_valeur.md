@@ -14,27 +14,24 @@ valeurs introduites doit être égales à la taille du tableau.
   On peut faire une autre version de l’exercice qui consiste à stocker dans un tableau, toutes les
   valeurs à rechercher.
 
-### Variables
+## Variables
+
+- tabValues[7]: Taille de mon tableau rempli par l'utilisateur
+- nOfValues: nombre de valeur à tester introduite par l'utilisateur
+- tabCompare[] : Tableau de une ou plusieurs valeurs à tester
+- nOfCompare: nombre de valeur introduite par l'utilisateur pour faire la comparaison
+- currentValue: valeur courante entrée par l'utilisateur pour le tableau
+- response: Réponse entrée par l'utilisateur
+- i,j,k: index de tableau
+
+## Algorithme
 
 ```
-tabValues[7]: Taille de mon tableau rempli par l'utilisateur
-nOfValues: nombre de valeur à tester introduite par l'utilisateur
-tabCompare[] : Tableau de une ou plusieurs valeurs à tester
-nOfCompare: nombre de valeur introduite par l'utilisateur pour faire la comparaison
-currentValue: valeur courante entrée par l'utilisateur pour le tableau
-response: Réponse entrée par l'utilisateur
-```
-
-### Initialisation
-
-```
+// Initialisation
 écrire("voulez-vous commencer?, oui/non)
 lire (response)
-```
 
-### Algorithme
-
-```
+// Début
 i = 0
 nOfValues = 0
 while (response == "oui" and i < 7)
@@ -72,6 +69,7 @@ while (j < nOfValues)
     end While
     j = j + 1
 end while
+// fin
 
 ```
 

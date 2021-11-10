@@ -10,28 +10,24 @@ le chiffre est correct, il faut afficher :
 ...
 9 \* chiffre
 
+## Variables
+
+- chiffre: chiffre entrée par l'utilisateur
+- produit: résultat obtenu de la multiplication
+- facteurX: multiplicateur
+
 ## Algorithme
 
-### Variables
-
 ```
-chiffre: chiffre entrée par l'utilisateur
-produit: résultat obtenu de la multiplication
-facteurX: multiplicateur
-```
-
-### Initialisation
-
-```
+//Initialisation
 écrire("Entrer un chiffre entre 1 et 9");
 lire(chiffre)
 while(chiffre < 1 or chiffre > 9 )
     écrire("Entrer un chiffre entre 1 et 9");
     lire(chiffre)
 end while
-```
 
-```
+//Début
 facteurX = 1
 while(facteurX < 10)
     produit = facteurX * chiffre;
@@ -39,4 +35,5 @@ while(facteurX < 10)
     écrire("\n")
     facteurX = facteurX + 1
 end while
+//Fin
 ```

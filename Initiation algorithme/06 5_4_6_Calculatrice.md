@@ -8,26 +8,24 @@
 Après la saisie de ces données, il faut afficher le résultat.
 Permettre à l’utilisateur de procéder à plusieurs calculs.
 
-## Algorithme
-
 ### Variables
 
-```
-operator: Opérateur +, -, *, /
-operant1: opérande 1
-operant2: opérande 2
-result: le résultat attendu à afficher
-response: Réponse entrée par l'utilisateur
-noDivide: Booleen qui vérifie si l'utilisateur à divisé par 0
-isContinue: Booleen si l'utilisateur continue avec le résultat obtenu.
-```
+- operator: Opérateur +, -, \*, /
+- operant1: opérande 1
+- operant2: opérande 2
+- result: le résultat attendu à afficher
+- response: Réponse entrée par l'utilisateur
+- noDivide: Booleen qui vérifie si l'utilisateur à divisé par 0
+- isContinue: Booleen si l'utilisateur continue avec le résultat obtenu.
 
-### Initialisation
+## Algorithme
 
 ```
+//Initialisation
 écrire("voulez-vous utiliser la calculatrice? oui/non")
 lire(response)
 
+// Début
 isContinue = false
 while(response == 'oui')
     if(isContinue)
@@ -86,4 +84,6 @@ while(response == 'oui')
     endif
 
 end while
+
+// Fin
 ```

@@ -1,36 +1,90 @@
-# Exercice 5_4_8: Compter les lettres
+# Exercice 5_4_8: Comptage de lettres
 
-Écrivez un programme qui demande à l’utilisateur de taper une phrase, puis qui affiche le nombre
-de « e » qu’il y a dans celle-ci. Une phrase se termine toujours par un point « . », un point
-d’exclamation « ! » ou un point d’interrogation « ? ». Pour effectuer cet exercice, il sera
-indispensable de lire la phrase caractère par caractère.
+Il s’agit d’écrire un algorithme permettant de lire une phrase à l’écran. Cette phrase ayant une longueur maximale de 100 caractères et se termine par un point ou un point d’interrogation ou un point d’exclamation.
+Lorsque la phrase a été introduite, il s’agit de compter le nombre d’apparition de chaque voyelle de l’alphabet.
+Pour résoudre ce problème, je vous propose de réaliser les sous-algorithmes suivants :
 
-Faire un sous-algorithme permettant de lire un ensemble de carcatères et un autre permettant de
-compter le nombre de « e » dans la phrase introduite.
+1. Un sous-algorithme me permettant de lire une phrase à l’écran virtuel de maximum 100 caractères
+2. Un sous-algorithme qui compte le nombre de voyelles dans une phrase de maximum 100 caractères
 
-Variante : comptage de toutes les voyelles avec un total par voyelle.
+## Variables
+
+- phraseTab[100]: Tableau qui contient une phrase de 100 caractères maximum
+- currentLetter: la lettre courante entrée par l'utilisateur
+- response: Réponse entrée par l'utilisateur
+- i: index du tableau
 
 ## Algorithme
 
-### Variables
+```
+// Initialisation
+écrire("voulez-vous introduire une phrase lettre par lettre? La phrase se termine par un point, un point d'interrogation ou d'exclamation. (oui/non)")
+lire(response)
+
+// Début
+i = 0
+phraseTaille = 0
+while (response == 'oui' && i < 100 )
+    écrire("Entrer une lettre")
+    lire(currentLetter)
+    phraseTab[i] = currentLetter
+    if (currentLetter == '.' || currentLetter == '?' ||currentLetter == '!')
+        then i = 100
+    end if
+    //vérifier si la phrase se termine à 100 avec une ponctuation
+    ...
+    //
+    i = i + 1
+    phraseTaille = phraseTaille + 1
+
+end while
+
+call readSentence(phraseTab, phraseTaille)
+call countVowel(phraseTab, phraseTaille)
+
+// Fin
+```
+
+#### sous algorithme 1
 
 ```
-phrase: phrase entrée par l'utilisateur
-longueurPhrase: Longueur de ma phrase
-totalVoyellesA: Total de (a) dans la phrase
-totalVoyellesE: Total de (e) dans la phrase
-totalVoyellesI: Total de (i) dans la phrase
-totalVoyellesO: Total de (o) dans la phrase
-totalVoyellesU: Total de (u) dans la phrase
-totalVoyelles: Nombre total de voyelles
+//début sous algorithme readSentence
+    // Paramètre input:
+    // array: Tableau de caractère
+    // size: Taille de mon tableau
+
+    readSentence(array, size)
+    // Paramètre output
+    // i:index
+    // sentence: la phrase à afficher
+    i = 0
+    while (i < size)
+        sentence = sentence + array[i]
+        i = i + 1
+    end while
+    écrire("La phrase à l’écran virtuel", sentence );
+//fin sous-algorithme
+
 ```
 
-### Initialisation
+#### sous algorithme 2
 
 ```
+//début sous algorithme countVowel
+    // Paramètre input:
+    // array: Tableau de caractère
+    // size: Taille de mon tableau
 
-```
-
-```
-
+    // Paramètre output
+    // i:index
+    // countVowel: le nombre de voyelles
+    i = 0
+    while (i < size)
+        if (array[i] == 'a' || array[i] == 'e' || array[i] == 'i', || array[i] == 'o'|| array[i] == 'u')
+            then countVowel = countVowel + 1
+        end if
+        i = i + 1
+    end while
+    écrire("Le nombre de voyelle dans la phrase est de: ", countVowel );
+//fin sous-algorithme
 ```

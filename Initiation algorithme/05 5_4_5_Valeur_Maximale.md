@@ -6,27 +6,24 @@ Attention: l'utilisateur peut introduire un nombre quelconque de valeur tant qu'
 
 Dans l'affichage, il ne faudra bien sûr qu'afficher les éléments qui auront reçu une valeur!!
 
+## Variables
+
+- currentValue: variable courante entrée par l'utilisateur
+- positionMIN: stocker la valeur minimale entrée par l'utilisateur
+- positionMAX: stocker la valeur maximale entrée par l'utilisateur
+- tabValue[15]: Taille de mon tableau
+- valeurNbr: nombre de valeur introduite par l'utilisateur
+- response: Réponse entrée par l'utilisateur
+- i, j: index de tableau
+
 ## Algorithme
 
-### Variables
-
 ```
-currentValue: variable courante entrée par l'utilisateur
-positionMIN: stocker la valeur minimale entrée par l'utilisateur
-positionMAX: stocker la valeur maximale entrée par l'utilisateur
-tabValue[15]: Taille de mon tableau
-valeurNbr: nombre de valeur introduite par l'utilisateur
-response: Réponse entrée par l'utilisateur
-```
-
-### Initialisation
-
-```
+//Initialisation
 écrire("voulez-vous commencer?, oui/non)
 lire (response)
-```
 
-```
+// Début
 valeurNbr = 0
 i = 0
 while (response == "oui" and i < 15)
@@ -64,6 +61,8 @@ while (j < valeurNbr)
 end while
 écrire("la valeur maximale est:", valeurMAX, "en position: ", positionMAX + 1);
 écrire("la valeur minimale est:", valeurMIN, "en position: ", positionMIN + 1);
+
+// Fin
 ```
 
 ## phase de test
