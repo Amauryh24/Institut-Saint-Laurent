@@ -30,6 +30,7 @@ while (response == 'oui' && i < 100 )
         then
             phraseTab[i] = currentLetter
             phraseTab[i + 1] = '\0'
+            response = 'non'
         else phraseTab[i] = currentLetter
     end if
     //vérifier si la phrase se termine à 100 avec une ponctuation
