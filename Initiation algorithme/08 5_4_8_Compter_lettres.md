@@ -27,7 +27,9 @@ while (response == 'oui' && i < 100 )
     écrire("Entrer une lettre")
     lire(currentLetter)
     if (currentLetter == '.' || currentLetter == '?' ||currentLetter == '!')
-        then phraseTab[i] = '\0'
+        then
+            phraseTab[i] = currentLetter
+            phraseTab[i + 1] = '\0'
         else phraseTab[i] = currentLetter
     end if
     //vérifier si la phrase se termine à 100 avec une ponctuation
