@@ -8,9 +8,9 @@ Dans l'affichage, il ne faudra bien sûr qu'afficher les éléments qui auront r
 
 ## Variables
 
-- currentValue: variable courante entrée par l'utilisateur
-- positionMIN: stocker la valeur minimale entrée par l'utilisateur
-- positionMAX: stocker la valeur maximale entrée par l'utilisateur
+- currentValue: Valeur courante entrée par l'utilisateur
+- posMIN: stocker la valeur minimale entrée par l'utilisateur
+- posMAX: stocker la valeur maximale entrée par l'utilisateur
 - tabValue[15]: Taille de mon tableau
 - valeurNbr: nombre de valeur introduite par l'utilisateur
 - response: Réponse entrée par l'utilisateur
@@ -27,8 +27,9 @@ lire (response)
 valeurNbr = 0
 i = 0
 while (response == "oui" and i < 15)
-    écrire("entrer une valeur numérique:", currentValue)
-    tab[i] = currentValue
+    écrire("entrer une valeur numérique:")
+    lire(currentValue)
+    tabValue[i] = currentValue
 
     if (valeurNbr == 0)
         then
@@ -39,13 +40,13 @@ while (response == "oui" and i < 15)
     if (currentValue > valeurMAX)
         then
             valeurMAX = currentValue
-            positionMAX = i
+            posMAX = i
     end if
 
     if (currentValue < valeurMIN)
         then
             valeurMIN = currentValue
-            positionMIN = i
+            posMIN = i
     end if
     écrire("voulez vous entrez une autre valeur?", oui/non)
     lire(response)
@@ -56,18 +57,18 @@ end while
 écrire("voici toute les valeurs introduites:)
 j = 0
 while (j < valeurNbr)
-    écrite("valeur", j + 1, ", tab[j] )
+    écrire("valeur", j + 1, ", tab[j] )
     j = j + 1
 end while
-écrire("la valeur maximale est:", valeurMAX, "en position: ", positionMAX + 1);
-écrire("la valeur minimale est:", valeurMIN, "en position: ", positionMIN + 1);
+écrire("la valeur maximale est:", valeurMAX, "en position: ", posMAX + 1);
+écrire("la valeur minimale est:", valeurMIN, "en position: ", posMIN + 1);
 
 // Fin
 ```
 
 ## phase de test
 
-| Desscription | Données        | Résultat attendu                                                      | Résultat obtenu                                                       | Status du test |
-| ------------ | -------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | -------------- |
-| Cas général  | 45,6,78,-1,170 | - Valeur maximal= 170 en position 5, valeur minimal= -1 en position 4 | - Valeur maximal= 170 en position 5, valeur minimal= -1 en position 4 | Ok             |
-| test limite  | -1,-45,30,-15  | - Valeur maximal= 30 en position 3, valeur minimal= -45 en position 2 | - Valeur maximal= 30 en position 3, valeur minimal= -45 en position 2 | Ok             |
+| Description | Données        | Résultat attendu                                                      | Résultat obtenu                                                       | Status du test |
+| ----------- | -------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | -------------- |
+| Cas général | 45,6,78,-1,170 | - Valeur maximal= 170 en position 5, valeur minimal= -1 en position 4 | - Valeur maximal= 170 en position 5, valeur minimal= -1 en position 4 | Ok             |
+| test limite | -1,-45,30,-15  | - Valeur maximal= 30 en position 3, valeur minimal= -45 en position 2 | - Valeur maximal= 30 en position 3, valeur minimal= -45 en position 2 | Ok             |

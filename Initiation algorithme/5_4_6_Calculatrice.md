@@ -8,7 +8,7 @@
 Après la saisie de ces données, il faut afficher le résultat.
 Permettre à l’utilisateur de procéder à plusieurs calculs.
 
-### Variables
+## Variables
 
 - operator: Opérateur +, -, \*, /
 - operant1: opérande 1
@@ -16,7 +16,7 @@ Permettre à l’utilisateur de procéder à plusieurs calculs.
 - result: le résultat attendu à afficher
 - response: Réponse entrée par l'utilisateur
 - noDivide: Booleen qui vérifie si l'utilisateur à divisé par 0
-- isContinue: Booleen si l'utilisateur continue avec le résultat obtenu.
+- isBegin: Booleen si l'utilisateur commence ou continue l'utilisation de la calculatrice.
 
 ## Algorithme
 
@@ -26,13 +26,13 @@ Permettre à l’utilisateur de procéder à plusieurs calculs.
 lire(response)
 
 // Début
-isContinue = false
+isBegin = true
 while(response == 'oui')
-    if(isContinue)
-        then operant1 = result
-        else
+    if(isBegin)
+        then
             écrire("entrée la première opérande")
             lire(operant1)
+        else  operant1 = result
     endif
 
     écrire("Quelle opération voulez-vous effectuer? -,+,*,/")
@@ -44,20 +44,23 @@ while(response == 'oui')
     écrire("entrée votre opérande")
     lire(operant2)
 
-    if (operator == '-')
+    if (operator === '-')
         then result = operant1 - operant2
     endif
-    if (operator == '+')
+    if (operator === '+')
         then result = operant1 + operant2
     endif
-    if (operator == '*')
-        if (operant1 == 0 or operant2 == 0)
+    if (operator === '*')
+        if (operant1 === 0 or operant2 === 0)
             then result = 0
             else result = operant1 * operant2
         endif
     endif
-    if (operator == '/')
-        if ( operant2 == 0)
+    if (operator === '/')
+        if (operant1 === 0)
+            then result = 0
+        endif
+        if (operant2 === 0)
             then noDivide = true
             else result = operant1 / operant2
         endif
@@ -65,25 +68,29 @@ while(response == 'oui')
 
     if (noDivide)
         then
-            noDivide = false
-            isContinue = false
             écrire("Nous ne pouvons pas diviser par zéro")
-            écrire(\n)
             écrire("Voulez-vous de nouveau utiliser la calculatrice? oui/non")
             lire(response)
+            isBegin = true
         else
-            écrire("le résultat de", operant1," ", operator, " ", operant2, "=", result)
+            écrire("le résultat de ", operant1," ", operator, " ", operant2, " = ", result)
             écrire("voulez-vous effectuer une opération depuis ce résultat? oui/non)
-            if (response == 'oui')
-                then isContinue = true
+            lire(response)
+            if (response === 'oui')
+                then isBegin = false
                 else
-                    isContinue = false
                     écrire("Voulez-vous de nouveau utiliser la calculatrice? oui/non")
                     lire(response)
+                    isBegin = true
             endif
     endif
-
 end while
-
 // Fin
 ```
+
+## phase de test
+
+| Desscription | Données | Résultat attendu | Résultat obtenu | Status du test |
+| ------------ | ------- | ---------------- | --------------- | -------------- |
+| Cas général  | 4\*0    | 0                | 0               | Ok             |
+| test limite  | 0/ 0    | non défini       | non défini      | Ok             |

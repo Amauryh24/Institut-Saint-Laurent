@@ -7,24 +7,25 @@ inversement. Plus grand ! si le nombre est inférieur à 10.
 ## Variables
 
 - currentValue: Valeur courante entrée par l'utilisateur
-- value1 : variable qui stocke la valeur 10
-- valur2 : variable qui stocke la valeur 20
 
 ## Algorithme
 
 ```
 // Initialisation
-value1 = 10
-value2 = 20
+
 écrire("Veuillez insérer une valeur comprise entre 10 et 20")
 lire(currentValue)
 
 //Début
 while (currentValue < 10 && currentValue > 20)
     if currentValue < 10
-        then écrire("Plus grand!")
-        else écrire("Plus petit!")
+        then écrire("Plus grand !")
     endif
+    if (currentValue > 20)
+        then écrire("plus petit !")
+    endif
+    écrire("Insérez une valeur comprise entre 10 et 20")
+    lire(currentValue)
 end while
 //fin
 ```
