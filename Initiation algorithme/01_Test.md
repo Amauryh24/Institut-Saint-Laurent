@@ -112,14 +112,18 @@ size2 = size2 - 1
 //Fin sous algorithme
 ```
 
-## Remarques
-
-Faut t-il réelement trier chaque tableau ou uniquement le troisième tableau ? (temps de calcule)
-Imaginons qu'on a 5 tableaux dont on doit récupérer les valeurs uniques pour chaque tableau. Une fois qu'on a comparé les 2 premiers tableaux et créé le tableau unique, on peut comparer le tableau unique avec n tableaux avec un sous-algorihme.
-
 ## phase de test
 
 | Description | Données                                       | Résultat attendu         | Résultat obtenu          | Status du test |
 | ----------- | --------------------------------------------- | ------------------------ | ------------------------ | -------------- |
 | Cas général | [56,12,48,159,45,23,10,17], [189,56,89,12,17] | [10,23,45,48,89,159,189] | [10,23,45,48,89,159,189] | ok             |
-| test limite | [7,7,7,7,7], [7,3,7]                          | [7,3]                    | [7,3]                    | ok             |
+| Test limite | [7,7,7,7,7], [7,3,7]                          | [7,3]                    | [7,3]                    | ok             |
+
+## Reflexion
+
+- initialisation des tableaux par l'utilisateur
+- Attribuer la première valeur du premier tableau dans le tableau unique
+- Sous-algorithme pour vérifier n tableau avec tableau unique
+- Sous-algorithme pour trier le tableau unique
+- afficher le résultat
+- Pas besoin de trié chaque tableau, mais seulement le tableau unique
