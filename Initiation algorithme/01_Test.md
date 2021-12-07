@@ -121,9 +121,9 @@ size2 = size2 - 1
 
 ## Reflexion
 
-- initialisation des tableaux par l'utilisateur
+- Initialisation des tableaux par l'utilisateur
 - Attribuer la première valeur du premier tableau dans le tableau unique
 - Sous-algorithme pour vérifier n tableau avec tableau unique
 - Sous-algorithme pour trier le tableau unique
-- afficher le résultat
+- Afficher le résultat
 - Pas besoin de trié chaque tableau, mais seulement le tableau unique
