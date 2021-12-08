@@ -29,10 +29,38 @@ end while
 call initTab(tabInt1, tabSize1)
 call initTab(tabInt2, tabSize2)
 
-tabUnique[0] = tabInt1[0]
-tabUniqueSize = 1
-call addUniqueValueTab(tabInt1, tabUnique, tabSize1, tabUniqueSize)
-call addUniqueValueTab(tabInt2, tabUnique, tabSize2, tabUniqueSize)
+i = 0
+while (i < tabSize1)
+    j = 0
+    while j < tabSize2
+        if (tabInt1[i] == tabInt2[j])
+            then
+                deleteValue(tabInt1, tabSize1, i)
+                tabSize1 = tabSize1 - 1
+                deleteValue(tabInt2, tabSize2, j)
+                tabSize2 = tabSize2 - 1
+        endif
+        j = j + 1
+    end while
+    i = i + 1
+end while
+
+
+
+i = 0
+while i < tabSize1
+    tabUnique[i] = tabInt1[i]
+    i = i + 1
+end while
+
+i=0
+j= tabSize1
+while i < tabSize2
+     tabUnique[j] = tabInt2[i]
+     i = i + 1
+     j = j + 1
+end while
+
 
 call sortTab(tabUnique, tabUniqueSize)
 
@@ -54,7 +82,7 @@ end while
 
 #### paramètre output (variables)
 
-- currentValue: Valeur courante entré par l'utilisateur
+- currentValue: Valeur courante entrée par l'utilisateur
 - i : index du tableau
 
 ```
@@ -71,45 +99,27 @@ end while
 // Fin sous-algorithme
 ```
 
-### Sous-algorithme 02 - addUniqueValueTab(tab1, tab2, size1, size2)
+### Sous-algorithme 02 - deleteValue(tab, taille, index)
 
 #### Paramètre input
 
-- tab1 : Le tableau des valeurs insérer par l'utilisateur
-- tab2 : Le tableau des valeurs unique
-- size1 : taille du tableau choisi par l'utilisateur
-- size2 : taille du tableau unique
+- tab : le tableau où la valeur sera enlevé
+- tailler : taille du tableau
+- index : index à partir de cet index qu'on va déplacer tout les autres valeurs
 
 #### paramètre output (variables)
 
-- isUnique: Valeur courante entré par l'utilisateur
-- i,j : index du tableau
+- i : index
 
 ```
-// Début sous-algorithme
-addUniqueValueTab(tab1, tab2, size1, size2)
-i=0
-while i < size1
-    j = 0
-    isUnique = true
-    while j < size2
-        if tab1[i] == tab2[j]
-            then
-                isUnique = false
-                j = size2 // la valeur n'est pas unique, on force l'arrêt de la boucle et on passe à la valeur i suivante
-        endif
-        j = j + 1
-    end while
-
-    if (isUnique)
-        then
-            tab2[size2] = tab1[i]
-            size2 = size2 + 1
-    endif
+// Sous algorithme
+deleteValue(tab, taille, index)
+i = index
+while (i < taille)
+    tab[i] = tab[i + 1]
     i = i + 1
 end while
-size2 = size2 - 1
-//Fin sous algorithme
+// Fin sous algorithme
 ```
 
 ## phase de test
@@ -117,13 +127,4 @@ size2 = size2 - 1
 | Description | Données                                       | Résultat attendu         | Résultat obtenu          | Status du test |
 | ----------- | --------------------------------------------- | ------------------------ | ------------------------ | -------------- |
 | Cas général | [56,12,48,159,45,23,10,17], [189,56,89,12,17] | [10,23,45,48,89,159,189] | [10,23,45,48,89,159,189] | ok             |
-| Test limite | [7,7,7,7,7], [7,3,7]                          | [7,3]                    | [7,3]                    | ok             |
-
-## Reflexion
-
-- Initialisation des tableaux par l'utilisateur
-- Attribuer la première valeur du premier tableau dans le tableau unique
-- Sous-algorithme pour vérifier n tableau avec tableau unique
-- Sous-algorithme pour trier le tableau unique
-- Afficher le résultat
-- Pas besoin de trié chaque tableau, mais seulement le tableau unique
+| Test limite | [7,7,7,7,7], [7,3,7]                          | [7,3]                    | [3,7,7,7]                | moyen          |
