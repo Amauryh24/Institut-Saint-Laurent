@@ -1,5 +1,5 @@
 addEventListener("load", function () {
-  // question = randomize(questions);
+  question = randomize(questions);
   prepareQuizz();
   checkQuizz();
 });
