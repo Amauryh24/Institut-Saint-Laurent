@@ -55,17 +55,17 @@ let questions = [
     ],
     "./sources/Q4.png"
   ),
-  new Question(
-    "Que fait l’instruction dans le microprocesseur ? (voir image)",
-    "",
-    [
-      "Les instructions du programme à exécuter se trouvent en mémoire vive (RAM)",
-      "Le système d’exploitation charge le programme en mémoire",
-      "Le processeur reçoit l’ordre du système d’exploitation d’exécuter la première instruction. Le gestionnaire de mémoire (dans le chipset de la carte mère) ramène l’instruction sur le processeur",
-      "Toutes les réponses sont justes",
-      "Toutes les réponses sont fausses",
-    ]
-  ),
+  // new Question(
+  //   "Que fait l’instruction dans le microprocesseur ? (voir image)",
+  //   "",
+  //   [
+  //     "Les instructions du programme à exécuter se trouvent en mémoire vive (RAM)",
+  //     "Le système d’exploitation charge le programme en mémoire",
+  //     "Le processeur reçoit l’ordre du système d’exploitation d’exécuter la première instruction. Le gestionnaire de mémoire (dans le chipset de la carte mère) ramène l’instruction sur le processeur",
+  //     "Toutes les réponses sont justes",
+  //     "Toutes les réponses sont fausses",
+  //   ]
+  // ),
 
   new Question(
     "Parmis les exemples quel est le comparatif hardward/software ?",
