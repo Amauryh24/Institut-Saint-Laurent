@@ -478,4 +478,165 @@ let questions = [
       "Toutes les réponses sont fausses",
     ]
   ),
+
+  //Structure des ordinateurs - questions examen 2021
+  new Question(
+    "Pourquoi la mémoire RAM doit-elle être rafraichie:",
+    "Les condensateur sont trop petits pour garder la charge",
+    [
+      "Pour éviter les problèmes de surchauffe",
+      "Parce qu'elle est organisée en bancs",
+      "Les condensateur sont trop petits pour garder la charge",
+      "A cause du temps de précharge",
+    ]
+  ),
+  new Question(
+    "Un DVD+R utilise les pré-pits pour le positionnement de l'écriture:",
+
+    "Faux",
+    ["Vrai", "Faux"]
+  ),
+  new Question(
+    "Le processeur I7 possède une séparation de cache données/instructions:",
+    "Au niveau 1",
+    ["Au niveau 1", "Au niveau 2", "Au niveau 1 et 2", "Au niveau 3 (commun)"]
+  ),
+  new Question(
+    "Que vaut la valeur de 00001111 en décimal, octal, hexadécimal ?",
+    "15, 017, 0F",
+    ["16, 020, 20", "16, 020, 10", "15, 017, 10", "15, 017, 0F"]
+  ),
+  new Question("La taille utile d'un secteur disque est:", "512B", [
+    "512b",
+    "512B",
+    "4096b",
+    "4MB",
+    "4KB",
+  ]),
+  new Question(
+    "Le passage d'architectures parallèles vers des architectures séries est dû à la diaphonie:",
+    "Vrai",
+    ["Vrai", "Faux"]
+  ),
+  new Question(
+    "La machine virtuelle Java est",
+    "Un générateur de langage machine",
+    [
+      "Un substitut au processseur physique",
+      "Un langage de programmation",
+      "Un programme portable sur différents systèmes d'exploitation",
+      "Un générateur de langage machine",
+    ]
+  ),
+  new Question(
+    "Un processeur (coeur) possédant plusieurs unités d'exécution de calcul (UAL) est dit:",
+    "Superscalaire",
+    ["Hyperthreading", "SIMD", "A pipelining", "Superscalaire"]
+  ),
+  new Question(
+    "Un cluster est un regroupement système de plusieurs secteur hardwares résultant d'un formatage de haut niveau.",
+    "Vrai"[("Vrai", "Faux")]
+  ),
+  new Question(
+    "Quel est le type de rafraichissement mémoire représenté sur le schéma ?",
+    "Interleaving et mode page",
+    [
+      "Interleaving",
+      "Ras seulement",
+      "Interleaving et mode page",
+      "Nibble et interleaving",
+    ],
+    "./sources/03.png"
+  ),
+  new Question(
+    "Quel sera la situation après l'exécution de la microinstruction ci-dessus",
+    "A vaudra 5, B vaudra 10 et MPC vaudra 1",
+    [
+      "A vaudra 5, B vaudra 10 et MPC vaudra 1",
+      "A vaudra 4, MPC vaudra 1, la valeur de 4 sera stockée à l'adresse 0 de la RAM",
+      "Aucune réponse n'est correcte",
+      "A et B vaudront 10 et MPC vaudra 1",
+      "A vaudra 10",
+      "A vaudra 10 et MPC vaudra 1",
+    ],
+    "./sources/02.png"
+  ),
+  new Question("Que vaut la valeur 11111111 en décimal:", "255", [
+    "127",
+    "255",
+    "256",
+    "FF",
+  ]),
+
+  // Créer quizz à choix multiple
+  // Sélectionner la ou les affirmation(s) valide(s):
+  // - Un processeur est est un interpreteur de langage machine et un exécuteur de microcode (juste)
+  // - le microprogramme est le code du processeur (juste)
+  // - Les programmes Java sont portables (juste)
+  // - un compilateur n'est pas un processeur virtuel (juste)
+  // - Le langage machine équivaut à l'assembleur (juste)
+  new Question("Chercher l'erreur:", "Un SSD utilise un stockage magnétique", [
+    "La mémoire flash utilisent des transistors",
+    "Un disque dur  utilise un stockage magnétique",
+    "RAId assurent prefomance  (R/W) et sécurité  de sécurité sur disques",
+    "Un SSD utilise un stockage magnétique",
+    "PCI express est une pile  logitielle  pour réaliser une communication de type réseau",
+  ]),
+  new Question(
+    "Le schéma RAM suivant représente:",
+    "A gauche la lecturre d'un 0, à droite la lecture d'un 1",
+    [
+      "A gauche la lecturre d'un 0, à droite la lecture d'un 1",
+      "A gauche la lecture d'un 1, à droite la lecture d'un 0",
+      "A gauche la écriture d'un 1, à droite la écriture d'un 0",
+      "A gauche la écriture d'un 0, à droite la écriture d'un 1",
+    ],
+    "./sources/01.png"
+  ),
+  new Question(
+    "S.M.A.R.T est:",
+    "Un logiciel intégré au contrôleur de disque dur",
+    [
+      "Propre au système RAID",
+      "Un logiciel intégré au système d'exploitation",
+      "Un logiciel intégré au contrôleur de disque dur",
+      "Optimise la rapidité des disques SSD",
+    ]
+  ),
+  new Question(
+    "L'impression laser utilise pour l'écriture des données:",
+    "L'électricité statique",
+    [
+      "Un système piezzo-électrique",
+      "Un système piezzo-électrostatique",
+      "Un système purement thermique (c'est pour cela que les pages sont chaudes à la sortie)",
+      "L'électricité statique",
+      "Un système bubble-jet",
+    ]
+  ),
+  new Question(
+    "Un processeur qui veut exécuter une instruction ne se trouvant pas en cache provoque un défaut de page.",
+    "Faux",
+    ["Vrai", "Faux"]
+  ),
+  new Question(
+    "Les différent codages utilisés en informatique tels que EFM, EFM+, RLL, 8/10 assurent:",
+    "Le fait qu'il n'y ait pas trop de 1 ou 0 consécutifs",
+    [
+      "Le fait qu'il n'y ait pas trop de 1 ou 0 consécutifs et l'intégrité des données",
+      "La compression et l'intégrité de données",
+      "Le fait qu'il n'y ait pas trop de 1 ou 0 consécutifs",
+      "Le fait qu'il n'y ait pas trop de 1 ou 0 consécutifs et la compression de données",
+    ]
+  ),
+  new Question(
+    "La gestion de la table de pages d'un programme est réalisée par:",
+    "Par le système d'exploitation",
+    [
+      "Par le système d'exploitation",
+      "Le contrôleur de cache",
+      "Le contrôleur RAM",
+      "Le programme lui même",
+    ]
+  ),
 ];
