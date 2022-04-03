@@ -77,18 +77,16 @@ void verifyConnect4(char tab[ROW][COL], int col, int row, char token, bool* pSta
 	}
 
 	// vertical
-	for (int i = ROW; i > (ROW - maxToken); i--)
-	{
-		if (tab[i][iCol] == token && tab[i - 1][iCol] == token && tab[i - 2][iCol] == token && tab[i - 3][iCol] == token) {
-			*pStatus = true;
-		}
+	if (tab[iRow][iCol] == token && tab[iRow + 1][iCol] == token && tab[iRow + 2][iCol] == token && tab[iRow + 3][iCol] == token) {
+		*pStatus = true;
 	}
 
-	// diagonal haut-gauche -> bas-droite V2
+	// diagonal haut-gauche -> bas-droite
 	if (tab[iRow][iCol] == token && tab[iRow + 1][iCol + 1] == token && tab[iRow + 2][iCol + 2] == token && tab[iRow + 3][iCol + 3] == token) {
 		*pStatus = true;
 	}
-	// diagonal haut-droite -> bas-gauche V2
+
+	// diagonal haut-droite -> bas-gauche
 	if (tab[iRow][iCol] == token && tab[iRow + 1][iCol - 1] == token && tab[iRow + 2][iCol - 2] == token && tab[iRow + 3][iCol - 3] == token) {
 		*pStatus = true;
 	}

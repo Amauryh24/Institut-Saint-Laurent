@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <cctype>
 
 #include "stdcolor.h"
 #include "displayC4.h"
@@ -14,7 +15,7 @@ int main()
 	initGame(gameTab);
 
 	int laps = 0;
-	while (laps < (ROW * COL) || isContinue == 'Y' || isContinue == 'y') {
+	while (laps < (ROW * COL) && toupper(isContinue) == 'Y') {
 		tokenPlayer = (laps % 2 == 0) ? TOKEN1 : TOKEN2;
 		displayColor('Y');
 		if (laps % 2 == 0) printf("\nTour: %d", (laps / 2) + 1);
@@ -22,8 +23,7 @@ int main()
 
 		verifyCol(gameTab, tokenPlayer, &col);
 		addTokenConnect4(gameTab, col, tokenPlayer, &row);
-		// get position of token
-		printf("\nposistion colonne %d et position ligne %d", col, row);
+	
 		displayPower4(gameTab);
 		verifyConnect4(gameTab, col, row, tokenPlayer, &winner);
 		if (winner) {
@@ -40,13 +40,12 @@ int main()
 			printf("\nVoulez-vous faire une autre partie de puissance 4 (Y/N)? ");
 			scanf("%c", &isContinue);
 			emptyBuffer();
-			if (isContinue == 'Y' || isContinue == 'y') {
+			if (toupper(isContinue) == 'Y') {
 				laps = -1;
 				winner = false;
 				endGame = false;
 				initGame(gameTab);
 			}
-			else break;
 		}
 
 		laps++;
